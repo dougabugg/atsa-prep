@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <style>
+            body {
+                font-family:sans-serif;
+            }
+            .output-container {
+                text-align: center;
+                font-weight: bold;
+            }
+            .primary-term {
+                font-size: 3em;
+            }
+            .user-input {
+                color: #EE7700;
+            }
+            .correct-answer {
+                color: #007755;
+            }
+            .wrong-answer {
+                color: #aa0000;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <form id="cfg">
+                <div><strong>Configuration Options</strong></div>
+                <div><label>Rounds
+                    <input type="number" name="rounds" value="10" min="1" />
+                </label></div>
+                <div><label>Timer
+                    <input type="number" name="timer" value="2" step="0.1" min="0.1" />
+                </label></div>
+                <div>Sections (only first section works right now)
+                    <ul>
+                        <li><label><input type="radio" name="section" value="1" checked />
+                            First section, three variable memorization
+                        </label></li>
+                        <li><label><input type="radio" name="section" value="2" disabled />
+                            Second section, two variables, one equation
+                        </label></li>
+                        <li><label><input type="radio" name="section" value="3" disabled />
+                            Third section, three variables, two equations
+                        </label></li>
+                        <li><label><input type="radio" name="section" value="4" disabled />
+                            First, second and third sections in order
+                        </label></li>
+                    </ul>
+                </div>
+                <input type="reset" value="Reset to default" />
+            </form>
+            <hr />
+            <input id="start-game" type="button" value="Start" />
+            <input id="stop-game" type="button" value="Stop" />
+        </div>
+        <div class="output-container">
+            <div id="section-name"></div>
+            <div class="primary-term">
+                <span id="primary-output"></span>
+                <span id="secondary-output"></span>
+            </div>
+            <div id="feedback-output"></div>
+        </div>
+        <script src="memory_game_2.js"></script>
+    </body>
+</html>
