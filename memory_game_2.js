@@ -40,7 +40,7 @@ function reset_feedback() {
 function start_section_1() {
     state.section = 1;
     section_name.textContent = "First Section"
-    state.round = 0;
+    state.round = -1;
     let vars, order_show, order_input, index;
     function new_round() {
         state.round++;
